@@ -1,18 +1,33 @@
 <div class="container">
-  <div class="row">
-    <div class="col-4">
-      <mat-icon>build</mat-icon>
-    </div>
+  <div class="MainContainer">
+    <div class="row">
+      <div class="col-4">
+
+        <div>
+          <span color="primary" [matBadge]="this.badge" [matBadgeHidden]="this.badge == 0" matBadgePosition="above after" matBadgeColor="accent"  matBadgeOverlap="false">
+            Messages
+          </span>
+        </div>
+
+        <div>
+            <span color="primary" matBadge="50" matBadgePosition="above below" matBadgeColor="warn" matBadgeSize="medium"   matBadgeOverlap="false">
+             Warnning
+            </span>
+          </div>
+
+          <div>
+              <span color="primary" matBadge="100" matBadgePosition="above after" matBadgeColor="accent"  matBadgeOverlap="false">
+                Error
+              </span>
+            </div>
+      </div>
+      <div class="col-4">
+
+      </div>
+      <div class="col-4">
 
 
-    <div class="col-4">
-      <div>
       </div>
     </div>
-    <div class="col-4">
-
-    </div>
-  </div>
-  <div class="row">
   </div>
 </div>
