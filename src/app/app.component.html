@@ -1,26 +1,3 @@
-<mat-sidenav-container>
-    <mat-sidenav #sidenav (openedChange)="log($event)"  [(opened)]="opended" mode="side">
-        Start sidenav content
-    </mat-sidenav>
-    <mat-sidenav-content>
-
-    <div>
-        <button type="button" (click)="opended = !opended" class="btn btn-default">{{opended ? 'Close': 'Open'}}</button>
-
-        <button type="button" (click)="sidenav.open()" class="btn btn-default">Open</button>
-
-        <button type="button" (click)="sidenav.close()" class="btn btn-default">Close</button>
-
-
-        <button type="button" (click)="sidenav.toggle()" class="btn btn-default">Toggle</button>
-
-
-    </div>
-    </mat-sidenav-content>
-
-
-</mat-sidenav-container>
-
 
 
 <div class="container">
@@ -28,10 +5,35 @@
     <div class="row">
       <div class="col-4">
 
+          <mat-menu #appMenu="matMenu" >
+              <button mat-menu-item [matMenuTriggerFor]="subMenu" color="primary" MenuPositionX="before" MenuPositionY="above" >Front End</button>
+              <button mat-menu-item>Back End</button>
+            </mat-menu>
+
+          <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+
+          <mat-menu #subMenu="matMenu" >
+              <button mat-menu-item>Angular</button>
+              <button mat-menu-item>React</button>
+              <button mat-menu-item>Veu</button>
+            </mat-menu>
 
       </div>
       <div class="col-4">
+          <mat-menu #lazyMenu="matMenu" >
+           <ng-template matMenuContent>
+              <button mat-menu-item [matMenuTriggerFor]="sub2Menu" color="primary" MenuPositionX="before" MenuPositionY="above" >Sign in</button>
+              <button mat-menu-item>Help</button>
+           </ng-template>
+            </mat-menu>
 
+          <button mat-flat-button [matMenuTriggerFor]="lazyMenu">Menu</button>
+
+          <mat-menu #sub2Menu="matMenu" >
+              <button mat-menu-item>Using Google</button>
+              <button mat-menu-item>Using FaceBook</button>
+              <button mat-menu-item>Use Yahoo</button>
+            </mat-menu>
       </div>
       <div class="col-4">
 

@@ -7,13 +7,5 @@ import { MatButtonToggleChange } from "@angular/material";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "AngularMaterial";
-  progress = 50;
-  showSpinner: boolean;
 
-  opended: false;
-
-  log(logs: any) {
-    console.log(logs);
-  }
 }
