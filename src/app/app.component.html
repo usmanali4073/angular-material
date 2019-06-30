@@ -2,24 +2,15 @@
   <div class="MainContainer">
     <div class="row">
       <div class="col-4">
-
         <div>
-          <span color="primary" [matBadge]="this.badge" [matBadgeHidden]="this.badge == 0" matBadgePosition="above after" matBadgeColor="accent"  matBadgeOverlap="false">
-            Messages
-          </span>
+          <mat-progress-spinner [value]="this.progress" color="warn"></mat-progress-spinner>
         </div>
-
         <div>
-            <span color="primary" matBadge="50" matBadgePosition="above below" matBadgeColor="warn" matBadgeSize="medium"   matBadgeOverlap="false">
-             Warnning
-            </span>
-          </div>
-
-          <div>
-              <span color="primary" matBadge="100" matBadgePosition="above after" matBadgeColor="accent"  matBadgeOverlap="false">
-                Error
-              </span>
-            </div>
+          <mat-spinner
+            [value]="this.progress" color="warn" *ngIf="showSpinner"  >
+          </mat-spinner>
+          <button  mat-raised-button (click)="LoadData()" color="primary">Load Data</button>
+        </div>
       </div>
       <div class="col-4">
 

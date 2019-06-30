@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { MatButtonToggleChange } from '@angular/material';
+import { timeout } from 'q';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,14 @@ import { MatButtonToggleChange } from '@angular/material';
 })
 export class AppComponent {
   title = 'AngularMaterial';
-  badge = 0;
+  progress = 50;
+  showSpinner:boolean;
+
+
+  LoadData(){
+    this.showSpinner = true;
+    setTimeout(() => {
+      this.showSpinner = false;
+    }, 5000);
+  }
 }
