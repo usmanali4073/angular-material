@@ -1,11 +1,27 @@
-<mat-toolbar color="primary" class="navbar">
-  <div>Speaya</div>
-  <div>
-    <span>Home</span>
-    <span>About</span>
-    <span>Services</span>
-  </div>
-</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav (openedChange)="log($event)"  [(opened)]="opended" mode="side">
+        Start sidenav content
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+    <div>
+        <button type="button" (click)="opended = !opended" class="btn btn-default">{{opended ? 'Close': 'Open'}}</button>
+
+        <button type="button" (click)="sidenav.open()" class="btn btn-default">Open</button>
+
+        <button type="button" (click)="sidenav.close()" class="btn btn-default">Close</button>
+
+
+        <button type="button" (click)="sidenav.toggle()" class="btn btn-default">Toggle</button>
+
+
+    </div>
+    </mat-sidenav-content>
+
+
+</mat-sidenav-container>
+
+
 
 <div class="container">
   <div class="MainContainer">
