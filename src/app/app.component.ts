@@ -9,7 +9,4 @@ import { MatButtonToggleChange } from "@angular/material";
 export class AppComponent {
   title = "AngularMaterial";
 
-  groupValueChanged(value: string) {
-console.log(value);
-  }
 }

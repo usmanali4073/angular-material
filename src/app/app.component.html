@@ -1,30 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-4">
-      <div class="center">
-        <h4>Angular Button</h4>
-        <mat-button-toggle color="primary" #toggleBtn>Toggle Me</mat-button-toggle>
-      </div>
+      <mat-icon>build</mat-icon>
     </div>
+
+
     <div class="col-4">
       <div>
-        <mat-button-toggle-group multiple (change)="groupValueChanged($event.value)" #toggleGroup="matButtonToggleGroup">
-          <mat-button-toggle value="Typesciprt">TypeScript</mat-button-toggle>
-          <mat-button-toggle value="Angular">Angular</mat-button-toggle>
-          <mat-button-toggle value="CSharp">C Sharp</mat-button-toggle>
-        </mat-button-toggle-group>
       </div>
-      {{toggleGroup.value}}
     </div>
     <div class="col-4">
-      <div class="center">
-
-      </div>
 
     </div>
   </div>
   <div class="row">
-    {{toggleBtn.checked}}
   </div>
 </div>
-
