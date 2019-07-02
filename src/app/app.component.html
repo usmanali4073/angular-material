@@ -1,25 +1,44 @@
-
 <div class="container">
   <div class="MainContainer">
     <div class="row">
-      <div class="col-10">
-          <mat-tab-group #tabRef (selectedTabChange)="LogData($event)">
-              <mat-tab label="Angular">
-                <h2>Some Tab Content</h2>
-                <p>.....</p>
-              </mat-tab>
-              <mat-tab label="React">
-                  <h2>Some Tab Content</h2>
-                  <p>.....</p>
-                </mat-tab>
-                <mat-tab label="Vue">
-                    <h2>Some Tab Content</h2>
-                    <p>.....</p>
-                  </mat-tab>
-            </mat-tab-group>
+      <div class="col-8">
+        <mat-vertical-stepper linear >
+          <!-- Services Form Ends -->
+          <mat-step label="Json Spec" completed=true>
+
+            <form action="" method="POST" role="form">
+              <legend>Form title</legend>
+
+              <div class="form-group">
+                <label for="">label</label>
+                <input type="text" class="form-control" id="" placeholder="Input field">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+          </mat-step>
+          <!--Services Form Ends -->
+          <!-- Editor Form Starts -->
+          <mat-step label="Editor" completed=false optional>
+              <div>
+                  <button mat-button matStepperNext>Next</button>
+                  <button mat-button matStepperPrevious>Back</button>
+
+              </div>
+          </mat-step>
+          <!-- Editor Form Ends -->
+          <!-- Editor Form Genertorer -->
+          <mat-step label="Genertorer" completed=false>
+
+              <button mat-button matStepperPrevious>Back</button>
+          </mat-step>
+          <!-- Editor Form Genertorer Ends -->
+        </mat-vertical-stepper>
       </div>
       <div class="col-2">
-{{tabRef.selectedIndex }}
+
       </div>
 
     </div>
