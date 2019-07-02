@@ -2,25 +2,26 @@
 <div class="container">
   <div class="MainContainer">
     <div class="row">
-      <div class="col-4">
-          <mat-card>
-              <mat-card-title>Student Info</mat-card-title>
-              <mat-card-subtitle>Student Personal Information</mat-card-subtitle>
-              <mat-card-content><p>This a Good  Student Passed Grades with Above</p></mat-card-content>
-              <img mat-card-image  src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-              <mat-card-actions align="start" >
-                <button mat-button >Edit</button>
-                <button mat-button>LIKE</button>
-              </mat-card-actions>
-              <mat-card-footer><p>Don't need delete a Student</p></mat-card-footer>
-              </mat-card>
+      <div class="col-10">
+          <mat-tab-group #tabRef (selectedTabChange)="LogData($event)">
+              <mat-tab label="Angular">
+                <h2>Some Tab Content</h2>
+                <p>.....</p>
+              </mat-tab>
+              <mat-tab label="React">
+                  <h2>Some Tab Content</h2>
+                  <p>.....</p>
+                </mat-tab>
+                <mat-tab label="Vue">
+                    <h2>Some Tab Content</h2>
+                    <p>.....</p>
+                  </mat-tab>
+            </mat-tab-group>
       </div>
-      <div class="col-4">
+      <div class="col-2">
+{{tabRef.selectedIndex }}
+      </div>
 
-      </div>
-      <div class="col-4">
-
-      </div>
     </div>
   </div>
 </div>
