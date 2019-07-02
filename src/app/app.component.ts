@@ -7,6 +7,8 @@ import { MatButtonToggleChange } from '@angular/material';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  hide = true;
+  urlEndPoint: string;
   LogData(data: any) {
     console.log(data);
   }

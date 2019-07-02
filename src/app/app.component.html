@@ -2,43 +2,34 @@
   <div class="MainContainer">
     <div class="row">
       <div class="col-8">
-        <mat-vertical-stepper linear >
-          <!-- Services Form Ends -->
-          <mat-step label="Json Spec" completed=true>
+        <div>
+          <mat-form-field floatLabel="auto" >
+            <input matInput name="endPoint" #endpointurlInput="ngModel" [(ngModel)]="urlEndPoint" placeholder="Swagger Json Endpoint" required>
+            <mat-hint align="start">Swagger json spec</mat-hint>
+            <mat-error *ngIf="endpointurlInput.touched">Enter An Valid URL</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field floatLabel="auto">
+            <input matInput placeholder="Endpoint UserName" required>
+            <mat-hint align="start">Endpoint UserName</mat-hint>
+          </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
 
-            <form action="" method="POST" role="form">
-              <legend>Form title</legend>
+          </div>
 
-              <div class="form-group">
-                <label for="">label</label>
-                <input type="text" class="form-control" id="" placeholder="Input field">
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-            <div>
-                <button mat-button matStepperNext>Next</button>
-            </div>
-          </mat-step>
-          <!--Services Form Ends -->
-          <!-- Editor Form Starts -->
-          <mat-step label="Editor" completed=false optional>
-              <div>
-                  <button mat-button matStepperNext>Next</button>
-                  <button mat-button matStepperPrevious>Back</button>
 
-              </div>
-          </mat-step>
-          <!-- Editor Form Ends -->
-          <!-- Editor Form Genertorer -->
-          <mat-step label="Genertorer" completed=false>
 
-              <button mat-button matStepperPrevious>Back</button>
-          </mat-step>
-          <!-- Editor Form Genertorer Ends -->
-        </mat-vertical-stepper>
       </div>
       <div class="col-2">
-
+       {{endpointurlInput.status}}
       </div>
 
     </div>
