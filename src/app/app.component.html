@@ -4,11 +4,21 @@
       <div class="col-8">
         <div>
           <mat-form-field>
-            <mat-select placeholder="Fruits" #selectedFruits="ngModel" [(ngModel)]="selectedValue" name="item" required>
+            <mat-select placeholder="Developer Type" #selectedFruits="ngModel" multiple [(ngModel)]="selectedValue" name="item" required>
               <mat-option>None</mat-option>
-              <mat-option *ngFor="let item of items" [value]="item">
-                {{item}}
-              </mat-option>
+              <mat-optgroup label="FrontEnd">
+                <mat-option value="Angular">
+                  Angular
+                </mat-option>
+                <mat-option value="React">
+                    React
+                  </mat-option>
+              </mat-optgroup>
+              <mat-optgroup label="Backend">
+                <mat-option *ngFor="let item of items" [value]="item">
+                  {{item}}
+                </mat-option>
+              </mat-optgroup>
             </mat-select>
           </mat-form-field>
 

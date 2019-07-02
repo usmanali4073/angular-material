@@ -9,7 +9,7 @@ import { MatButtonToggleChange } from '@angular/material';
 export class AppComponent {
   hide = true;
   selectedValue: string;
-  items: string[] = ['apple', 'orange', 'Mango'];
+  items: string[] = ['C Sharp', 'Java', 'Ruby'];
   LogData(data: any) {
     console.log(data);
   }
