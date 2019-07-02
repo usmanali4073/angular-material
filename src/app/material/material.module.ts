@@ -18,7 +18,8 @@ import {
   MatStepperModule,
   MatFormFieldModule,
   MatInputModule,
-  MatRadioModule
+  MatRadioModule,
+  MatSelectModule
 } from "@angular/material";
 
 
@@ -40,7 +41,8 @@ const MaterialComponents = [
   MatStepperModule,
   MatFormFieldModule,
   MatInputModule,
-  MatRadioModule
+  MatRadioModule,
+  MatSelectModule
 ];
 
 @NgModule({
